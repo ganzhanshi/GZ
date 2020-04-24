@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!--建立类与表的映射关系-->
+    <class name="com.liuqi.hibernate.demo1.Customer" table="customer">
+        <!--建立类中的属性与表中的主键对应-->
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <!--建立类中普通的属性和表的字段对应-->
+        <property name="customer_address" column="customer_address"></property>
+        <property name="customer_name" column="customer_name"></property>
+        <property name="customer_age" column="customer_age"></property>
+        <property name="customer_sno" column="customer_sno"></property>
+        <property name="customer_phone" column="customer_phone"></property>
+        <property name="is_delete" column="is_delete"></property>
+    </class>
+</hibernate-mapping>
